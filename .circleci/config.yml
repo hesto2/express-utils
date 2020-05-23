@@ -16,7 +16,7 @@ jobs:
           command: yarn build
       - run:
           name: Publish package
-          command: yarn npm-publish
+          command: cd ./dist && sh ../node_modules/.bin/npm-publish
 
 workflows:
   version: 2
