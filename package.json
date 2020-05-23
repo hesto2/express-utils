@@ -1,7 +1,6 @@
 {
-  "name": "express-utils",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@hesto2/express-utils",
+  "version": "0.0.0",
   "author": "carter.hesterman <hestermancarter@gmail.com>",
   "license": "MIT",
   "devDependencies": {
