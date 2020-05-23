@@ -23,7 +23,7 @@
   },
   "scripts": {
     "watch": "yarn cross-env NODE-ENV=development nodemon -e ts --exec ts-node ./src/index.ts",
-    "test": "jest ./src",
+    "test": "echo 'no tests yet'",
     "prebuild": "rm -rf ./dist/; mkdir ./dist",
     "build": "yarn tsc && cp package.json ./dist"
   },
