@@ -6,7 +6,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: build
+          name: Install dependencies
+          command: yarn
+      - run:
+          name: Build
           command: yarn build
       - run:
           name: Authenticate with registry
