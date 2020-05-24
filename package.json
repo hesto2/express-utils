@@ -1,6 +1,6 @@
 {
   "name": "@hesto2/express-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "carter.hesterman <hestermancarter@gmail.com>",
   "license": "MIT",
   "devDependencies": {
