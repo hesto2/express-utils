@@ -3,9 +3,11 @@ import morgan from 'morgan';
 import methodOverride from 'method-override';
 import cookieParser from 'cookie-parser';
 import bb from 'express-busboy';
+import rawParser from './rawParser';
 
 const useCommonMiddleware = (app: Express) => {
   app.use(morgan('dev'));
+  app.use(rawParser);
   app.use(json());
   app.use(urlencoded({ extended: true }));
   app.use(methodOverride());
@@ -17,6 +19,4 @@ const useCommonMiddleware = (app: Express) => {
   );
 };
 
-export { default as errorHandler } from './errorHandler';
-export { default as useNotFoundHandler } from './notFoundHandler';
 export default useCommonMiddleware;
