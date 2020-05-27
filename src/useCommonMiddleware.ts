@@ -4,8 +4,10 @@ import methodOverride from 'method-override';
 import cookieParser from 'cookie-parser';
 import bb from 'express-busboy';
 import rawParser from './rawParser';
+import cors from 'cors';
 
 const useCommonMiddleware = (app: Express) => {
+  app.use(cors());
   app.use(morgan('dev'));
   app.use(rawParser);
   app.use(json());
