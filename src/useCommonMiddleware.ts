@@ -6,11 +6,14 @@ import bb from 'express-busboy';
 import rawParser from './rawParser';
 import cors from 'cors';
 
-const useCommonMiddleware = (app: Express) => {
+const useCommonMiddleware = (
+  app: Express,
+  config: { json?: { limit?: string } } | undefined
+) => {
   app.use(cors());
   app.use(morgan('dev'));
   app.use(rawParser);
-  app.use(json());
+  app.use(json(config?.json));
   app.use(urlencoded({ extended: true }));
   app.use(methodOverride());
   app.use(cookieParser());
